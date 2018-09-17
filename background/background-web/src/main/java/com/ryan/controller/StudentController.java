@@ -1,0 +1,45 @@
+package com.ryan.controller;
+
+import com.ryan.utils.BaseController;
+import org.springframework.stereotype.Controller;
+
+/**
+ * @author YoriChen
+ * @date 2018/5/21
+ */
+@Controller
+public class StudentController extends BaseController {
+
+   /* @Autowired
+    StudentDubboService studentService;
+
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/findStudentListByPage")
+    public void findStudentListByPage(StudentVO stu){
+        ResponseEntity<List<StudentVO>> stuList = studentService.findStudentListByPage(stu);
+        writeJson(stuList);
+    }
+
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/findStudentInfoByStuId")
+    public void findStudentInfoByStuId(Integer stuId){
+        ResponseEntity<StudentVO> stuList = studentService.findStudentInfoByStuId(stuId);
+        writeJson(stuList);
+    }
+
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/insertStudent")
+    public void insertStudent(StudentVO stu){
+        ResponseEntity<Object> resObj = studentService.insertStudent(stu);
+        writeJson(resObj);
+    }
+
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/updateStudentByStuId")
+    public void updateStudentByStuId(StudentVO stu){
+        ResponseEntity<Object> resObj = studentService.updateStudentByStuId(stu);
+        writeJson(resObj);
+    }
+
+    @RequestMapping(method = { RequestMethod.POST, RequestMethod.GET }, value = "/json/deleteStudentByStuId")
+    public void deleteStudentByStuId(Integer stuId){
+        ResponseEntity<Object> resObj = studentService.deleteStudentByStuId(stuId);
+        writeJson(resObj);
+    }*/
+}

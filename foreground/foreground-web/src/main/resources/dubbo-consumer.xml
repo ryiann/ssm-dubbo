@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="${dubbo.appname}" logger="slf4j" />
+
+	<!-- 使用multicast广播注册中心暴露发现服务地址 -->
+	<!-- register:false，只订阅，不注册 -->
+	<dubbo:registry id="registry" protocol="zookeeper" address="${dubbo.url}"/>
+	
+	<!-- dubbo接口 -->
+	<dubbo:reference registry="registry"
+					 check="false"
+					 connections="1"
+					 interface="com.ryan.service.StudentDubboService"
+					 id="studentDubboService"
+					 timeout="${dubbo.timeout}"
+					 version="${dubbo.version}"
+					 retries="0"
+					 />
+</beans>

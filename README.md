@@ -283,7 +283,7 @@ dubbo-consumer.xml
 ## 测试
 
 JDK：1.8
-Dubbo-Admin ：http://116.62.22.2:8080/dubbo
+Dubbo-Admin ：http://dubbo.lqiao.top/dubbo-admin
 
 - 用户名: root
 - 密码: root
